@@ -1,0 +1,63 @@
+<==================CRATE SYSTEM API'S=========================================>
+
+1. get_all_costomers - http://localhost:8083/customers
+2. get_all_farmers - http://localhost:8083/farmers
+3. register_Farmer - http://localhost:8083/farmers 
+{
+ "name":"सुनील कुंभार",
+ "mobile":"9876543210",
+ "village":"Karad"
+}
+4. register_Customer - http://localhost:8083/customers
+{
+ "name":"सुनील कुंभार",
+ "mobile":"9876543210",
+ "address":"Karad"
+}
+5. crate_Take_Farmer - http://localhost:8081/crate/farmer-take
+{
+ "personId":2,
+ "crateCount":50
+}
+6. crate_Farmer_return - http://localhost:8081/crate/farmer-return
+{
+ "personId":2,
+ "crateCount":50
+}
+7. crate_Take_Customer - http://localhost:8081/customer-take
+{
+ "personId":2,
+ "crateCount":20
+}
+8. crate_Customer_Return - http://localhost:8081/customer-return
+{
+ "personId":2,
+ "crateCount":20
+}
+9. crate_Purchase - http://localhost:8081/crate/shop-purchase
+{
+    "crateCount":1000
+}
+10. shop_Stock - http://localhost:8081/crate/shop-stock
+11. customer_Report - http://localhost:8081/crate/customer-report
+12. farmer_Report - http://localhost:8081/crate/farmer-report
+13. daily_Report - http://localhost:8081/daily-report/{date}
+14. dashboard - http://localhost:8081/dashboard
+15. customer_Ledger - http://localhost:8081/customer-ledger/{id}
+16. farmer_Ledger - http://localhost:8081/farmer-ledger/{id}
+17. shop_Purchase - http://localhost:8081/shop-purchase
+18. balance - http://localhost:8081/balance/{personType}/{personId}
+19. farmer_Update - http://localhost:8083/farmers/{id}
+{
+  "name": "Ramesh Patil",
+  "village": "Karad",
+  "mobile": "7499163307"
+}
+20. customer_Update - http://localhost:8083/customers/{id}
+{
+  "name": "Rahul Traders",
+  "city": "Satara",
+  "mobile_number": "9890252400"
+}
+21. farmerByid - http://localhost:8083/farmers/byFid/{id}
+22. customerByid - http://localhost:8083/customers/byCid/{id}
