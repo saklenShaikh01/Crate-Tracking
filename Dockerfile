@@ -8,4 +8,4 @@ RUN chmod +x mvnw && ./mvnw clean install -Dmaven.test.skip=true
 
 EXPOSE 8083
 
-CMD ["java", "-jar", "crate-management/target/*.jar"]
+CMD ["java", "-jar", "crate-management/target/crate-management-0.0.1-SNAPSHOT.jar"]
