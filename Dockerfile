@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN chmod +x mvnw && ./mvnw clean package -DskipTests
+RUN chmod +x mvnw && ./mvnw clean install -DskipTests
 
 EXPOSE 8083
 
-CMD ["java", "-jar", "target/*.jar"]
+CMD ["sh", "-c", "java -jar crate-management/target/*.jar"]
