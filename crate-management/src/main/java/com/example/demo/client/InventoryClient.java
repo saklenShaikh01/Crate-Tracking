@@ -11,7 +11,7 @@ import java.util.Map;
 
 @FeignClient(
   name = "api-gateway",
-  url = "http://localhost:8082",
+  url = "https://api-gateway.onrender.com",
   contextId = "UserClient"
 )
 public interface InventoryClient {

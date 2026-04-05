@@ -45,8 +45,8 @@ public class CustomerService {
 
       dto.setId(c.getId());
       dto.setName(c.getName());
-      dto.setMobile(c.getMobile());
-      dto.setAddress(c.getAddress());
+      dto.setMobile(c.getMobile_number());
+      dto.setAddress(c.getCity());
 
       dto.setBalance(balanceMap.getOrDefault(c.getId(), 0));
 
@@ -61,8 +61,8 @@ public class CustomerService {
       .orElseThrow(() -> new RuntimeException("Customer not found"));
 
     existing.setName(customer.getName());
-    existing.setAddress(customer.getAddress());
-    existing.setMobile(customer.getMobile());
+    existing.setCity(customer.getCity());
+    existing.setMobile_number(customer.getMobile_number());
 
     return customerRepository.save(existing);
   }

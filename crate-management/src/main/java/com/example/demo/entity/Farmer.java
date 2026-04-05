@@ -1,7 +1,13 @@
 package com.example.demo.entity;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Farmer {
 
   @Id
@@ -14,36 +20,5 @@ public class Farmer {
 
   private String village;
 
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getMobile() {
-    return mobile_number;
-  }
-
-  public void setMobile(String mobile) {
-    this.mobile_number = mobile;
-  }
-
-  public String getVillage() {
-    return village;
-  }
-
-  public void setVillage(String village) {
-    this.village = village;
-  }
 
 }

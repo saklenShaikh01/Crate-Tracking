@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: ${PORT:8082}
 
 spring:
   application:
@@ -21,12 +21,7 @@ spring:
             allowedMethods: "*"
             allowedHeaders: "*"
 
-eureka:
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+
 
 management:
   endpoints:

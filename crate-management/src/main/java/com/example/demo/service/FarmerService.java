@@ -27,7 +27,7 @@ public class FarmerService {
 
     existing.setName(farmer.getName());
     existing.setVillage(farmer.getVillage());
-    existing.setMobile(farmer.getMobile());
+    existing.setMobile_number(farmer.getMobile_number());
 
     return farmerRepository.save(existing);
   }
@@ -56,7 +56,7 @@ public class FarmerService {
 
       dto.setId(c.getId());
       dto.setName(c.getName());
-      dto.setMobile(c.getMobile());
+      dto.setMobile(c.getMobile_number());
       dto.setVillage(c.getVillage());
 
       dto.setBalance(balanceMap.getOrDefault(c.getId(), 0));

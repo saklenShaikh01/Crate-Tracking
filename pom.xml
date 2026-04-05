@@ -13,11 +13,9 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>service-registry</module>
     <module>api-gateway</module>
     <module>crate-management</module>
     <module>inventory-service</module>
-    <module>notification</module>
   </modules>
 
   <properties>

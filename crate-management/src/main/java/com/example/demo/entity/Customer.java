@@ -1,8 +1,14 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 public class Customer {
 
   @Id
@@ -15,36 +21,5 @@ public class Customer {
 
   private String city;
 
-  public Long getId() {
-    return id;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public String getMobile() {
-    return mobile_number;
-  }
-
-  public void setMobile(String mobile) {
-    this.mobile_number = mobile;
-  }
-
-  public String getAddress() {
-    return city;
-  }
-
-  public void setAddress(String address) {
-    this.city = address;
-  }
 
 }

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @FeignClient(
   name = "api-gateway",
-  url = "http://localhost:8082",
+  url = "https://api-gateway.onrender.com",
   contextId = "customerClient"
 )
 public interface CustomerClient {
