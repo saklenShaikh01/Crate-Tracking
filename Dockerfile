@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN chmod +x mvnw && ./mvnw clean install -DskipTests
+RUN chmod +x mvnw && ./mvnw clean install -Dmaven.test.skip=true
 
 EXPOSE 8083
 
-CMD ["sh", "-c", "java -jar crate-management/target/*.jar"]
+CMD ["java", "-jar", "crate-management/target/*.jar"]
