@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: crate-management
+    env: java
+    rootDir: crate-management
+    buildCommand: mvn clean package -Dmaven.test.skip=true
+    startCommand: java -jar target/*.jar
