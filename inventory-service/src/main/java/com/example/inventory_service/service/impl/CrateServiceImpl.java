@@ -72,7 +72,7 @@ public class CrateServiceImpl implements CrateService {
     transaction.setPersonType("FARMER");
     transaction.setTransactionType("FARMER_TAKE");
     CrateTransaction saved = repository.save(transaction);
-    sendCrateMessage(saved);
+//    sendCrateMessage(saved);
     int balance= this.getBalance(transaction.getPersonType(), transaction.getPersonId());
     transaction.setBalance(balance);
     return saved;
@@ -84,7 +84,7 @@ public class CrateServiceImpl implements CrateService {
     transaction.setPersonType("FARMER");
     transaction.setTransactionType("FARMER_RETURN");
     CrateTransaction saved = repository.save(transaction);
-    sendCrateMessage(saved);
+//    sendCrateMessage(saved);
     int balance= this.getBalance(transaction.getPersonType(), transaction.getPersonId());
     transaction.setBalance(balance);
     return saved;
@@ -96,7 +96,7 @@ public class CrateServiceImpl implements CrateService {
     transaction.setPersonType("CUSTOMER");
     transaction.setTransactionType("CUSTOMER_TAKE");
     CrateTransaction saved = repository.save(transaction);
-    sendCrateMessage(saved);
+//    sendCrateMessage(saved);
     int balance= this.getBalance(transaction.getPersonType(), transaction.getPersonId());
     transaction.setBalance(balance);
     return saved;
@@ -108,7 +108,7 @@ public class CrateServiceImpl implements CrateService {
     transaction.setPersonType("CUSTOMER");
     transaction.setTransactionType("CUSTOMER_RETURN");
     CrateTransaction saved = repository.save(transaction);
-    sendCrateMessage(saved);
+//    sendCrateMessage(saved);
     int balance= this.getBalance(transaction.getPersonType(), transaction.getPersonId());
     transaction.setBalance(balance);
     return saved;
