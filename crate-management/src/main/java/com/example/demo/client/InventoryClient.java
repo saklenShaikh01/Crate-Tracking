@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.Map;
 
 @FeignClient(
-  name = "api-gateway",
-  url = "https://api-gateway.onrender.com",
+  name = "inventory-services",
+  url = "https://crate-tracking.onrender.com",
   contextId = "UserClient"
 )
 public interface InventoryClient {
 
-  @GetMapping("api/crate/balance/{type}/{id}")
+  @GetMapping("/crate/balance/{type}/{id}")
   Integer getBalance(
     @PathVariable("type") String type,
     @PathVariable("id") Long id
   );
-  @PostMapping("api/crate/balance/bulk")
+  @PostMapping("/crate/balance/bulk")
   Map<Long, Integer> getBulkBalance(@RequestBody BulkBalanceRequest request);
 }
