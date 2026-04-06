@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.Map;
 
 @FeignClient(
-  name = "inventory-services",
+  name = "inventory-service",
   url = "https://crate-inventory.onrender.com",
   contextId = "UserClient"
 )
