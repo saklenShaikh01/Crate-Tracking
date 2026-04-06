@@ -6,12 +6,12 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 @FeignClient(
-  name = "crate-management",
-  url = "https://crate-tracking.onrender.com",
-  contextId = "customerClient"
+  name = "api-gateway",
+  url = "https://api-gateway.onrender.com",
+  contextId = "farmerClient"
 )
 public interface FarmerClient {
 
-  @GetMapping("/farmers/byFid/{id}")
+  @GetMapping("/api/farmers/byFid/{id}")
   CustomerPendingDTO getFarmer(@PathVariable("id") Long id);
 }
