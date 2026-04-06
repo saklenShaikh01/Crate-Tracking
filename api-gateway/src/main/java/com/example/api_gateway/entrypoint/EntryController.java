@@ -16,19 +16,19 @@ public class EntryController {
       .route("customer-service", r -> r
         .path("/api/customers/**")
         .filters(f -> f.rewritePath("/api/(?<segment>.*)", "/${segment}"))
-        .uri("https://crate-management.onrender.com"))
+        .uri("https://crate-tracking.onrender.com"))
 
       // FARMER APIs
       .route("farmer-service", r -> r
         .path("/api/farmers/**")
         .filters(f -> f.rewritePath("/api/(?<segment>.*)", "/${segment}"))
-        .uri("https://crate-management.onrender.com"))
+        .uri("https://crate-tracking.onrender.com"))
 
       // CRATE INVENTORY APIs
       .route("crate-service", r -> r
         .path("/api/crate/**")
         .filters(f -> f.rewritePath("/api/(?<segment>.*)", "/${segment}"))
-        .uri("https://inventory-service.onrender.com"))
+        .uri("https://crate-inventory.onrender.com"))
 
       .build();
   }

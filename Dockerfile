@@ -6,6 +6,6 @@ COPY . .
 
 RUN chmod +x mvnw && ./mvnw clean install -Dmaven.test.skip=true
 
-EXPOSE 8081
+EXPOSE 8082
 
-CMD ["java", "-jar", "inventory-service/target/inventory-service-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar"]
