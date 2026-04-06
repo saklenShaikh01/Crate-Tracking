@@ -7,7 +7,7 @@ WORKDIR /app
 # Copy only inventory jar
 COPY . .
 
-RUN chmod +x mvnw && ./mvnw clean install -Dmaven.test.skip=true
+RUN chmod +x mvnw && mvnw clean install -Dmaven.test.skip=true
 
 # Expose inventory port (example 8081)
 EXPOSE 8081
