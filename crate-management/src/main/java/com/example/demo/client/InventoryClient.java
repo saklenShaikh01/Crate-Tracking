@@ -11,7 +11,7 @@ import java.util.Map;
 
 @FeignClient(
   name = "inventory-services",
-  url = "https://crate-tracking.onrender.com",
+  url = "https://crate-inventory.onrender.com",
   contextId = "UserClient"
 )
 public interface InventoryClient {
