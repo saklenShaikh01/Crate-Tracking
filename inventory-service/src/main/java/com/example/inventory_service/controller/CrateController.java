@@ -121,4 +121,9 @@ public class CrateController {
     return crateService.getBulkBalance(request);
   }
 
+  @GetMapping("/health")
+  public String health() {
+    return "OK";
+  }
+
 }

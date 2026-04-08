@@ -37,6 +37,10 @@ public class CustomerController {
   public Customer getCustomerById(@PathVariable("id") Long id){
     return customerService.getCustomerById(id);
   }
+  @GetMapping("/health")
+  public String health() {
+    return "OK";
+  }
 
 
 }
