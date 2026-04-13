@@ -30,6 +30,10 @@ public class EntryController {
         .filters(f -> f.rewritePath("/api/(?<segment>.*)", "/${segment}"))
         .uri("https://crate-inventory.onrender.com"))
 
+      .route("khataBook", r -> r
+        .path("/api/account/**")
+        .filters(f -> f.rewritePath("/api/(?<segment>.*)", "/${segment}"))
+        .uri("http://localhost:8084"))
       .build();
   }
 }

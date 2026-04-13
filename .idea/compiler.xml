@@ -20,6 +20,7 @@
         <module name="api-gateway" />
         <module name="crate-management" />
         <module name="inventory-service" />
+        <module name="khataBook" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,6 +34,7 @@
       <module name="crate-system" options="-parameters" />
       <module name="demo" options="" />
       <module name="inventory-service" options="-parameters" />
+      <module name="khataBook" options="-parameters" />
       <module name="notification" options="-parameters" />
       <module name="service-registry" options="-parameters" />
     </option>

@@ -6,6 +6,6 @@ COPY . .
 
 RUN chmod +x mvnw && ./mvnw clean install -Dmaven.test.skip=true
 
-EXPOSE 8081
+EXPOSE 8084
 
-CMD ["java", "-jar", "inventory-service/target/inventory-service-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "khataBook/target/khataBook-0.0.1-SNAPSHOT.jar"]

@@ -23,6 +23,7 @@
     <module>api-gateway</module>
     <module>crate-management</module>
     <module>inventory-service</module>
+    <module>khataBook</module>
   </modules>
 
   <properties>
