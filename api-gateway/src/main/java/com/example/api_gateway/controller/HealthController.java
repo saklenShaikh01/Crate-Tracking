@@ -33,12 +33,14 @@ public class HealthController {
 
     Mono<String> crate = checkService("crate-management", "https://crate-tracking.onrender.com/customers/health");
     Mono<String> inventory = checkService("inventory-service", "https://crate-inventory.onrender.com/crate/health");
+    Mono<String> khataBook = checkService("khataBook", "https://crate-tracking-1.onrender.com/account/health");
 
-    return Mono.zip(crate, inventory)
+    return Mono.zip(crate, inventory,khataBook)
       .map(tuple -> {
         Map<String, String> result = new HashMap<>();
         result.put("crate", tuple.getT1());
         result.put("inventory", tuple.getT2());
+        result.put("khataBook", tuple.getT3());
         return result;
       });
   }

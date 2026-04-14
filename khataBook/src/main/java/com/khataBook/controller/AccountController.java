@@ -43,4 +43,9 @@ public class AccountController {
   public List<Map<String, Object>> summary() {
     return service.getCustomerSummary();
   }
+
+  @GetMapping("/health")
+  public String health() {
+    return "OK";
+  }
 }

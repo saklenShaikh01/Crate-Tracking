@@ -8,4 +8,4 @@ RUN chmod +x mvnw && ./mvnw clean install -Dmaven.test.skip=true
 
 EXPOSE 8084
 
-CMD ["java", "-jar", "khataBook/target/khataBook-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "api-gateway/target/api-gateway-0.0.1-SNAPSHOT.jar"]

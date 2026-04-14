@@ -33,7 +33,7 @@ public class EntryController {
       .route("khataBook", r -> r
         .path("/api/account/**")
         .filters(f -> f.rewritePath("/api/(?<segment>.*)", "/${segment}"))
-        .uri("http://localhost:8084"))
+        .uri("https://crate-tracking-1.onrender.com"))
       .build();
   }
 }
